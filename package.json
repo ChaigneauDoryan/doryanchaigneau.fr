@@ -4,13 +4,13 @@
   "description": "doryan chaigneau",
   "author": "Doryan CHAIGNEAU",
   "license": "ISC",
-  "homepage": "https://github.com/DoryanChaigneau/doryanchaigneau.fr#readme",
+  "homepage": "https://github.com/ChaigneauDoryan/doryanchaigneau.fr#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DoryanChaigneau/doryanchaigneau.fr.git"
+    "url": "git+https://github.com/ChaigneauDoryan/doryanchaigneau.fr.git"
   },
   "bugs": {
-    "url": "https://github.com/DoryanChaigneau/doryanchaigneau.fr/issues"
+    "url": "https://github.com/ChaigneauDoryan/doryanchaigneau.fr/issues"
   },
   "scripts": {
     "dev": "vite",
@@ -28,9 +28,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.8",
-    "tailwindcss": "^3.0.23",
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "vite": "^2.8.0"
   }
 }
