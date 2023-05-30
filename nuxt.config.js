@@ -53,7 +53,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    ['@nuxtjs/sitemap', { hostname: 'https://locationgourette.fr' }]
+    ['@nuxtjs/sitemap', { hostname: 'https://doryanchaigneau.fr' }]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
