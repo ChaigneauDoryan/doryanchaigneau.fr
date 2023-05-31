@@ -116,10 +116,10 @@
                             <div class="flex flex-col space-y-2">
                               <p class="font-semibold text-black">Intern</p>
                               <div>
-                                <p class="text-sm text-black"><b>Image-Charts</b> - Intern</p>
+                                <p class="text-sm text-black"><b>Aleda</b> - Intern</p>
                                 <p class="text-xs text-gray-400">
-                                  may. 2019 - jul. 2019<br>
-                                  Rennes, Pays de la Loire, France
+                                  jan. 2020 - feb. 2020<br>
+                                  Challans, Pays de la Loire, France
                                 </p>
                               </div>
                             </div>
