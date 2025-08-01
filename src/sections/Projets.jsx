@@ -1,10 +1,9 @@
-
 import React, { useContext } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { ThemeContext } from '../App';
 
 const Projets = () => {
-  const { theme } = useContext(ThemeContext);
+  const { resolvedTheme } = useContext(ThemeContext);
 
   const projets = [
     {
@@ -30,7 +29,7 @@ const Projets = () => {
       <Row>
         {projets.map((projet, index) => (
           <Col md={4} key={index}>
-            <Card className="mb-4" bg={theme === 'dark' ? 'dark' : 'light'} text={theme === 'dark' ? 'white' : 'dark'}>
+            <Card className="mb-4" bg={resolvedTheme === 'dark' ? 'dark' : 'light'} text={resolvedTheme === 'dark' ? 'white' : 'dark'}>
               <Card.Body>
                 <Card.Title>{projet.titre}</Card.Title>
                 <Card.Text>{projet.description}</Card.Text>

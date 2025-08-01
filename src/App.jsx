@@ -11,26 +11,38 @@ export const ThemeContext = createContext(null);
 function App() {
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      return savedTheme;
-    }
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
+    return savedTheme || 'system';
   });
 
+  const [resolvedTheme, setResolvedTheme] = useState('light');
+
   useEffect(() => {
-    document.documentElement.setAttribute('data-bs-theme', theme);
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+
+    setResolvedTheme(currentTheme);
+    document.documentElement.setAttribute('data-bs-theme', currentTheme);
     localStorage.setItem('theme', theme);
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e) => {
+      if (theme === 'system') {
+        const newSystemTheme = e.matches ? 'dark' : 'light';
+        setResolvedTheme(newSystemTheme);
+        document.documentElement.setAttribute('data-bs-theme', newSystemTheme);
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
+  const changeTheme = (newTheme) => {
+    setTheme(newTheme);
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, resolvedTheme, changeTheme }}>
       <div>
         <Accueil />
         <Experience />
