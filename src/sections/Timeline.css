@@ -1,0 +1,80 @@
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the start of the cross axis */
+  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+  padding-bottom: 20px; /* Space for scrollbar */
+}
+
+.timeline-item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 300px; /* Fixed width for each item */
+  margin: 0 15px; /* Spacing between items */
+  text-align: center;
+  position: relative;
+  padding-top: 20px; /* Space for the line and dot */
+}
+
+.timeline-item-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 20px; /* Length of the line connecting to the dot */
+  background-color: #6c757d; /* Gray color for the line */
+  transform: translateX(-50%);
+}
+
+.timeline-item-dot {
+  position: absolute;
+  top: 20px; /* Position below the line */
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #007bff; /* Primary color for the dot */
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure dot is above the line */
+}
+
+.timeline-item-card {
+  margin-top: 20px; /* Space between dot and card */
+}
+
+/* Responsive adjustments for vertical timeline on small screens */
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+    padding-bottom: 0;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin: 20px 0;
+    padding-top: 0;
+    padding-left: 40px; /* Increased padding to make space for line and dot */
+    text-align: left;
+    position: relative; /* Ensure positioning context for children */
+  }
+
+  .timeline-item-line {
+    top: 0;
+    left: 15px; /* Position the line */
+    width: 2px; /* Make it vertical */
+    height: 100%; /* Span the height of the item */
+    transform: none; /* Remove previous transform */
+  }
+
+  .timeline-item-dot {
+    top: 50%; /* Vertically center */
+    left: 15px; /* Horizontally align with the line */
+    transform: translate(-50%, -50%); /* Center the dot itself */
+  }
+
+  .timeline-item-card {
+    margin-top: 0;
+    margin-left: 0; /* Remove previous margin-left, padding-left on item handles spacing */
+  }
+}

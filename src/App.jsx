@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect, createContext } from 'react';
 import Accueil from './sections/Accueil';
-import Experience from './sections/Experience';
+import ExperienceTimeline from './sections/ExperienceTimeline';
+import EducationTimeline from './sections/EducationTimeline';
 import Projets from './sections/Projets';
 import Contact from './sections/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -45,7 +45,8 @@ function App() {
     <ThemeContext.Provider value={{ theme, resolvedTheme, changeTheme }}>
       <div>
         <Accueil />
-        <Experience />
+        <ExperienceTimeline />
+        <EducationTimeline />
         <Projets />
         <Contact />
       </div>
