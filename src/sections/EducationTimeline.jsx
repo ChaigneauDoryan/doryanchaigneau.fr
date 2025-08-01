@@ -13,19 +13,19 @@ const EducationTimeline = () => {
       title: "2018 - 2020",
       cardTitle: "BTS SIO",
       cardSubtitle: "Notre Dame Du Roc, La Roche-sur-Yon, Pays de la Loire, France",
-      cardDetailedText: "Computer engineering"
+      cardDetailedText: "Développement informatique"
     },
     {
       title: "2020 - 2021",
-      cardTitle: "RNCP II: Title CDA",
+      cardTitle: "RNCP II : Titre CDA",
       cardSubtitle: "EPSI, Nantes, Pays de la Loire, France",
-      cardDetailedText: "Computer engineering"
+      cardDetailedText: "Développement informatique"
     },
     {
       title: "2021 - 2023",
-      cardTitle: "Expert in IT and IS",
+      cardTitle: "RNCP VII : Titre EISI",
       cardSubtitle: "EPSI, Nantes, Pays de la Loire, France",
-      cardDetailedText: "Computer engineering"
+      cardDetailedText: "Développement informatique"
     }
   ];
 

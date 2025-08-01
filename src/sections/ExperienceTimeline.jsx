@@ -19,7 +19,7 @@ const ExperienceTimeline = () => {
     {
       title: "Été 2020",
       cardTitle: "Auto-entrepreneur",
-      cardSubtitle: "DCS - Gestion mini golf / salle de jeux, Saint-Jean-de-Monts, Pays de la Loire, France",
+      cardSubtitle: "DCS - Saint-Jean-de-Monts, Pays de la Loire, France",
       cardDetailedText: "Gestion du mini golf, bar, salle de jeu"
     },
     {

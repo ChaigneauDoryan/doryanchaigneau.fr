@@ -55,9 +55,14 @@ function App() {
         </Fade>
         <Projets />
         <Contact />
+        <footer style={{ textAlign: 'center', padding: '20px', background: '#f0f0f0', marginTop: 'auto' }}>
+          <p>&copy; 2024 Doryan Chaigneau. All rights reserved.</p>
+        </footer>
       </div>
     </ThemeContext.Provider>
-  );
+  )
 }
 
-export default App;
+
+export default App
+
