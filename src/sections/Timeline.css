@@ -1,15 +1,18 @@
+
 .timeline-container {
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Align items to the start of the cross axis */
-  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+  /* Removed overflow-x: auto; to prevent horizontal scrollbar */
   padding-bottom: 20px; /* Space for scrollbar */
+  padding: 0 20px; /* Add padding to the container instead of margin on items */
 }
 
 .timeline-item {
-  flex: 0 0 auto; /* Prevent items from shrinking */
-  width: 300px; /* Fixed width for each item */
-  margin: 0 15px; /* Spacing between items */
+  flex: 1 1 250px; /* Allow items to grow and shrink, with a base width of 250px */
+  min-width: 250px; /* Minimum width for each item */
+  max-width: 350px; /* Optional: Maximum width to prevent items from becoming too wide */
+  margin: 0 10px; /* Spacing between items */
   text-align: center;
   position: relative;
   padding-top: 20px; /* Space for the line and dot */
@@ -48,6 +51,7 @@
     align-items: flex-start;
     overflow-x: hidden;
     padding-bottom: 0;
+    padding: 0; /* Remove horizontal padding for vertical layout */
   }
 
   .timeline-item {

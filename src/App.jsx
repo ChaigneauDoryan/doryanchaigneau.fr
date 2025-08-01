@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, createContext } from 'react';
 import Accueil from './sections/Accueil';
 import ExperienceTimeline from './sections/ExperienceTimeline';
@@ -5,6 +6,7 @@ import EducationTimeline from './sections/EducationTimeline';
 import Projets from './sections/Projets';
 import Contact from './sections/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Fade } from 'react-awesome-reveal';
 
 export const ThemeContext = createContext(null);
 
@@ -45,8 +47,12 @@ function App() {
     <ThemeContext.Provider value={{ theme, resolvedTheme, changeTheme }}>
       <div>
         <Accueil />
-        <ExperienceTimeline />
-        <EducationTimeline />
+        <Fade triggerOnce>
+          <ExperienceTimeline />
+        </Fade>
+        <Fade triggerOnce delay={400}>
+          <EducationTimeline />
+        </Fade>
         <Projets />
         <Contact />
       </div>

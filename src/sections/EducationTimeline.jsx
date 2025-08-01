@@ -1,9 +1,9 @@
-
 import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import TimelineItem from '../components/TimelineItem';
 import { ThemeContext } from '../App';
 import './Timeline.css';
+import { Fade } from 'react-awesome-reveal';
 
 const EducationTimeline = () => {
   const { resolvedTheme } = useContext(ThemeContext);
@@ -34,11 +34,13 @@ const EducationTimeline = () => {
       <h2 className="text-center mb-5">Mon Parcours Scolaire</h2>
       <div className="timeline-container">
         {items.map((item, index) => (
-          <div key={index} className="timeline-item">
-            <div className="timeline-item-line"></div>
-            <div className="timeline-item-dot"></div>
-            <TimelineItem {...item} />
-          </div>
+          <Fade key={index} triggerOnce delay={index * 400}>
+            <div className="timeline-item">
+              <div className="timeline-item-line"></div>
+              <div className="timeline-item-dot"></div>
+              <TimelineItem {...item} />
+            </div>
+          </Fade>
         ))}
       </div>
     </Container>
