@@ -48,7 +48,7 @@ const Accueil = () => {
             <a href="https://github.com/chaigneaudoryan" target="_blank" rel="noopener noreferrer" className={`me-3 ${resolvedTheme === 'dark' ? 'text-light' : 'text-dark'}`}>
               <FaGithub size={30} />
             </a>
-            <a href="https://www.linkedin.com/in/doryan-chaigneau/" target="_blank" rel="noopener noreferrer" className={`me-3 ${resolvedTheme === 'dark' ? 'text-light' : 'text-dark'}`}>
+            <a href="https://www.linkedin.com/in/doryan-chaigneau-523b8019b/" target="_blank" rel="noopener noreferrer" className={`me-3 ${resolvedTheme === 'dark' ? 'text-light' : 'text-dark'}`}>
               <FaLinkedin size={30} />
             </a>
             
